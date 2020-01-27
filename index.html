@@ -192,11 +192,7 @@
  #rec157116835 
  .t-input__vis-ph { color:#000000;
 }</style>
-<script>
-function t_animateInputs(recid){ var el = $('#rec'+recid); var inputs = el.find('.t-input:not(.t-inputquantity):not(.t-input-phonemask__wrap):not(.t-input-phonemask)'); el.find('.t-input-group:not(.t-input-group_da):not(.t-input-group_uw):not(.t-input-group_ri):not(.t-input-group_rg) .t-input-block, .t-datepicker__wrapper').css({'position':'relative','overflow':'hidden'}); inputs.each(function(){ $(this).addClass('t-input_pvis'); if( typeof $(this).attr('placeholder')!='undefined' && $(this).attr('placeholder')!=''){ $(this).after('<div class="t-input__vis-ph">'+$(this).attr('placeholder')+'</div>');	} $(this).attr('placeholder',''); }); inputs.on("blur", function() { if($(this).val() != ''){ $(this).addClass('t-input_has-content'); }else{ $(this).removeClass('t-input_has-content'); } }); if(/iPhone|iPad|iPod/i.test(navigator.userAgent)){ el.find('textarea:not(.t-input_bbonly)').css('padding-left', '17px'); el.find('textarea.t-input_bbonly').css('text-indent', '-3px'); }
-}
-$(document).ready(function(){ setTimeout(function(){ t_animateInputs('157116835'); }, 500);
-})</script>
+
  </div>
  </div>
  </div>
