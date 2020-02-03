@@ -123,7 +123,16 @@
       }
     }
   </style>
-  
+  <script>
+  function getUclick_c(){
+    var e=document.cookie.match(new RegExp("(?:^|; )"+"uclick"+"=([^;]*)"));
+    return e?decodeURIComponent(e[1]):void 0
+  }
+  function cnv_pixel(){
+    var e="https://adwizz.online/",n=document.createElement("img");
+    "function"==typeof window.getUclick_c?n.src=e+"click.php?cnv_id=OPTIONAL&payout=OPTIONAL&uclick="+getUclick_c():n.src=e+"click.php?cnv_id=OPTIONAL&payout=OPTIONAL"
+  }
+  cnv_pixel();
 </script>
 
 <img height="1" width="1" src="https://www.facebook.com/tr?id=2583697948621417&ev=Lead&noscript=1"/> 
