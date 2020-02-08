@@ -162,7 +162,7 @@ $(function () {
       phone = form.find('input[name="phone"]'),
       button = form.find('button');
 
-    var tel_val = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+    var tel_val = /^((8|\+62)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
     error = !tel_val.test(phone.val());
 
     phone.toggleClass('error', error);
