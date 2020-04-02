@@ -1,1027 +1,907 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
-  <title>Serenity School</title>
+  <title>Новый сайт успешно создан и готов к работе</title>
+  <!-- b0a8e2d8ccb04b24683d347076e80d29e451a385:d3aa2e6571e673001cb012eda23bd97d02234f0b -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css"
+        integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css"
+        integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+  <style>
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="manifest" href="fonts/site.webmanifest">
-  <link rel="mask-icon" href="fonts/safari-pinned-tab.svg" color="#ff487d">
-  <meta name="msapplication-TileColor" content="#ff487d">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="icon" type="image/png" href="img/favicon.ico"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/plugins.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/style-mobile.css"
-        media="only screen and (max-width : 667px)">
-  <link rel="stylesheet" href="css/style-tablet.css"
-        media="only screen and (max-width : 1023px) and (min-width : 668px)">
-		<script src="https://healthblogtop.com/tracker.js"></script>
+    #ru, #en {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      font-family: 'PT Sans', Arial, sans-serif;
+      font-size: 16px;
+      height: 100%;
+      min-height: 768px;
+      margin: 0;
+    }
 
+    html {
+      height: 100%;
+    }
 
+    .top, .bottom, hr {
+      flex-shrink: 0;
+    }
+
+    hr {
+      height: 2px;
+      border: 0;
+      box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+      margin: 0;
+    }
+
+    a {
+      color: #2fa3e7;
+      text-decoration: none
+    }
+
+    a:focus, a:hover {
+      color: #157ab5;
+      text-decoration: none
+    }
+
+    body {
+      font-family: 'PT Sans', Arial, sans-serif;
+      font-size: 16px;
+      height: 100%;
+      margin: 0;
+    }
+
+    .alert {
+      font-family: 'PT Sans', Arial, sans-serif;
+      line-height: 24px;
+      border: none;
+      border-radius: 0;
+      border-bottom: 2px solid;
+      box-shadow: rgba(77, 80, 94, 0.4) 0px 0px 3px 0px;
+      padding: 25px;
+      background-color: white;
+    }
+
+    h1, h2 {
+      font-family: 'PT Sans Caption', Arial, sans-serif;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 21px;
+      line-height: 30px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    @media screen and (min-width: 801px) {
+
+      body {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-height: 768px;
+      }
+
+      .top {
+        background-color: #f7f9fa;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+      }
+
+      .bottom {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      header, footer, .hint {
+        width: 690px;
+        margin: 0 auto;
+      }
+
+      .hint {
+        padding-top: 30px;
+      }
+
+      header {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+
+      main {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 740px;
+        margin: 0 auto;
+      }
+
+      footer {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 690px;
+      }
+
+      .logo img {
+        max-width: 100%;
+        max-height: 75px;
+        position: relative;
+        top: 15px;
+      }
+
+      nav {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-right: 10px;
+      }
+
+      nav a {
+        padding: 0 15px
+      }
+
+      .octo {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .octo img {
+        height: 230px;
+        max-height: 230px;
+      }
+
+      .alert {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      .alert .icon {
+        margin: 0 25px;
+      }
+
+      .icon img {
+        height: 75px;
+      }
+
+      .alert.alert-success {
+        border-bottom-color: #70a123;
+      }
+
+      .footer-col {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 15px 0;
+      }
+
+      .footer-col > * {
+        padding: 2px;
+      }
+
+      .bottom-mobile {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+
+      .top {
+        margin: 0 auto;
+        background-color: #f7f9fa;
+      }
+
+      .bottom {
+        margin: 0 auto;
+        width: 95%;
+      }
+
+      header, footer, main {
+        width: 95%;
+      }
+
+      header, footer, main, .hint {
+        margin: 0 auto;
+      }
+
+      .hint {
+        padding-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      .logo {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+      }
+
+      .logo img {
+        width: 100%;
+      }
+
+      .icon img {
+        display: none;
+      }
+
+      .octo {
+        width: 60%;
+        margin: 0 auto;
+      }
+
+      .octo img {
+        width: 100%;
+      }
+
+      .alert.alert-success {
+        border-bottom-color: #70a123;
+        margin-bottom: 30px;
+        vertical-align: middle;
+        text-align: center;
+      }
+
+      header nav {
+        display: none;
+      }
+
+      .bottom {
+        display: none;
+      }
+
+      .bottom-mobile footer {
+        display: table;
+        width: 95%;
+        margin-bottom: 35px;
+      }
+
+      .bottom-mobile footer span {
+        text-align: right;
+        display: table-cell;
+      }
+
+      .bottom-mobile footer txt {
+        display: table-cell;
+      }
+
+      .bottom-mobile footer h2 {
+        margin-top: 20px;
+        margin-bottom: 5px;
+      }
+
+      .bottom-mobile footer p {
+        display: table-row;
+        width: 100%;
+        line-height: 25px;
+      }
+    }
+
+    .instruction-row, li {
+      margin-bottom: .5rem;
+    }
+
+    .fa-li {
+      color: #84c738;
+    }
+
+    .fa-ul {
+      margin-left: 1.3em;
+    }
+
+    span.key {
+      background-color: white;
+      padding: 5px;
+      border-radius: 5px;
+      box-shadow: 0 0 4px 0 rgba(86, 94, 113, 0.2);
+    }
+
+    .gallery {
+      padding-top: 20px;
+      display: none;
+    }
+
+    .gallery a {
+      display: block;
+      margin-bottom: 30px;
+      margin-top: 15px;
+    }
+  </style>
 </head>
 <body>
-
-
-
-<section id="section-1" class="container">
-  <div class="row header js-header">
-    <div class="header__logo">
-      <object type="image/svg+xml" data="assets/svg/logo.svg" width="188" height="28">
-       
-      </object>
-    </div>
-    <div class="header__join mobile-hidden">
-      <a href="#form" class="button js-anchor">Mendaftar</a>
-    </div>
-    <div class="header__phone">
-      <a href="tel:+6291224681929">
-        <span class="mobile-hidden">+62-912-2468-1929</span>
-        <span class="mobile-visible"><img src="fonts/call.svg" class="mobile-visible" alt="Call"></span>
+<div id="ru">
+  <div class="top">
+    <header>
+      <a href="http://beget.com" target="_blank" title="Перейти на сайт хостинг-провайдера" class="logo">
+        <img src="https://cp.beget.com/i/logo.png">
       </a>
-    </div>
+      <nav>
+        <a href="https://cp.beget.com" target="_blank">Панель управления</a>
+        <a href="https://beget.com/ru/domain-register" target="_blank">Регистрация доменов</a>
+        <a href="https://beget.com/ru/virtual-hosting" target="_blank">Тарифы</a>
+      </nav>
+    </header>
+    <main>
+      <div class="octo">
+        <img src="https://cp.beget.com/img/octo/octo_coffee.png">
+      </div>
+      <div class="alert alert-success">
+        <div class="icon">
+          <img src="https://cp.beget.com/i/icons/small/accept@2x.png">
+        </div>
+        <div class="text">
+          <h1>Новый сайт успешно создан и готов к работе</h1>
+          Благодарим Вас за то, что Вы выбрали наши услуги. Мы работаем для Вас!<br/>
+          Если у Вас возникли вопросы, мы с удовольствием ответим на них.
+        </div>
+      </div>
+      <div class="hint" id="cache-hint"></div>
+    </main>
   </div>
-
-  <div class="row main off js-main-header">
-    <h1 class="main__title title_medium js-main-title">
-      Mengajar <br>
-      terintegrasi <br class="br-land-hide">
-      pemasaran
-    </h1>
-    <p class="main__subline">На&nbsp;
-proyek nyata dengan&nbsp;anggaran iklan</p>
-    <p class="main__subline">
-      <a href="#form" class="button js-anchor">Mendaftar</a>
-    </p>
-    <div class="main__info">
-      <div class="main__info-box">
-        <object type="image/svg+xml" data="assets/svg/dates.svg" width="46" height="52"></object>
-        <span>27&nbsp;Februari&nbsp;&mdash; 5&nbsp;Juni</span>
-      </div>
-      <div class="main__info-box">
-        <object type="image/svg+xml" data="assets/svg/place.svg" width="67" height="51"></object>
-        <span>Indonesia,<br> Bolshaya Raznochinnaya, 28</span>
-      </div>
-    </div>
-    <div class="main__paint js-paralaxed">
-      <img src="img/paint1.png" class="preload transition js-preload" alt="Paint One">
-    </div>
+  <hr>
+  <div class="bottom-mobile">
+    <footer>
+      <h2>Тех. поддержка</h2>
+      <p>
+        <txt>Почта:</txt>
+        <span><a href="mailto:support@beget.com">support@beget.com</a></span></p>
+      <p>
+        <txt>Россия:</txt>
+        <span>+7 (800) 700-06-08</span></p>
+      <p>
+        <txt>Украина:</txt>
+        <span>+380 (800) 802-192</span></p>
+    </footer>
   </div>
-</section>
-<section class="container" id="course-for">
-  <div class="row">
-    <h2 class="title_medium">Untuk siapa kursus ini
-</h2>
+  <div class="bottom">
+    <footer>
+      <div class="footer-col">
+        <div>Тех. поддержка:</div>
+        <div>Бухгалтерия:</div>
+        <div>Руководство:</div>
+        <div>Telegram:</div>
+        <div>Skype:</div>
+      </div>
+      <div class="footer-col" style="padding-right: 100px;">
+        <a href="mailto:support@beget.com">support@beget.com</a>
+        <a href="mailto:bills@beget.com">bills@beget.com</a>
+        <a href="mailto:manager@beget.com">manager@beget.com</a>
+        <a href="tg://resolve?domain=begetbot">@begetbot</a>
+        <a href="https://join.skype.com/bot/ceda3526-d09b-4157-b6f0-91a646073c7e?add" target="_blank">Добавить в
+          контакты</a>
+      </div>
+      <div class="footer-col">
+        <div>Россия:</div>
+        <div>СПб:</div>
+        <div>Москва:</div>
+        <div>Украина:</div>
+        <div>Киев:</div>
+      </div>
+      <div class="footer-col">
+        <b>+7 (800) 700-06-08</b>
+        <b>+7 (812) 3854136</b>
+        <b>+7 (495) 721-80-88</b>
+        <b>+380 (800) 802-192</b>
+        <b>+380 (44) 300-02-18</b>
+      </div>
+    </footer>
   </div>
-  <div class="row course-for">
-    <div class="course-for__col">
-      <h3 class="title_small">Spesialis</h3>
-      <p>Pelajari cara membangun dan menjalankan strategi digital. Memahami bagaimana alat pemasaran
-        saling berinteraksi.</p>
-    </div>
-    <div class="course-for__col">
-      <h3 class="title_small">Pengusaha</h3>
-      <p>Bangun sistem pemasaran terintegrasi dalam bisnis Anda, buat strategi digital dan luncurkan
-        kampanye iklan.
-      </p>
-    </div>
+</div>
+
+<div id="en" style="display: none">
+  <div class="top">
+    <header>
+      <a href="http://beget.com" target="_blank" title="Web hosting home page" class="logo">
+        <img src="https://cp.beget.com/i/logo.png">
+      </a>
+      <nav>
+        <a href="https://cp.beget.com" target="_blank">Control Panel</a>
+        <a href="https://beget.com/en/domain-register" target="_blank">Domain registration</a>
+        <a href="https://beget.com/en/virtual-hosting" target="_blank">Plans</a>
+      </nav>
+    </header>
+    <main>
+      <div class="octo">
+        <img src="https://cp.beget.com/img/octo/octo_coffee.png">
+      </div>
+      <div class="alert alert-success">
+        <div class="icon">
+          <img src="https://cp.beget.com/i/icons/small/accept@2x.png">
+        </div>
+        <div class="text">
+          <h1>The new site has been successfully created and is ready to work</h1>
+          Thank you for choosing us. We are pleased to provide you with our services.<br/>
+          If you have any questions we will be happy to answer them.
+        </div>
+      </div>
+      <div class="hint" id="cache-hint"></div>
+    </main>
   </div>
-</section>
-
-<section class="container" id="about">
-  <div class="row about">
-    <h2 class="title_medium">О&nbsp;Tentu saja
-</h2>
-    <div class="about__mobile-numbers mobile-visible">
-      <div class="info-line__numbers">
-        <span>80</span> <br>
-        jam teori<br>
-        dan&nbsp;praktik
-      </div>
-      <div class="info-line__numbers">
-        <span>13</span> <br>
-        tahun&nbsp;&mdash; pengalaman kami
-<br>
-        masuk&nbsp;pemasaran
-      </div>
-    </div>
-    <div class="about__lines">
-      <div class="info-line">
-        <div class="info-line__caption">Pelatihan apa yang akan diberikan</div>
-        <div class="info-line__desc">
-          Dapatkan pengetahuan sistem, kuasai alat pemasaran digital, pelajari cara membuat strategi
-          promosi proyek. Untuk ini, kami mencurahkan 25 jam teori dan 65 jam latihan.
-        </div>
-        <div class="info-line__numbers mobile-hidden">
-          <span>90</span> <br>
-          jam teori
-<br>
-          dan&nbsp;praktik
-        </div>
-      </div>
-      <div class="info-line">
-        <div class="info-line__caption">Pendekatannya</div>
-        <div class="info-line__desc">
-          Program kursus didasarkan pada 13 tahun pengalaman agen pemasaran
-
-          <a href="/" target="_blank">Serenity</a>. Kami akan berbagi
-          pendekatan pemasaran sendiri berdasarkan indikator kinerja yang terukur dan perhitungan ROMI
-          untuk pelanggan.
-        </div>
-        <div class="info-line__numbers mobile-hidden">
-          <span>13</span> <br>
-          tahun&nbsp;&mdash; pengalaman kami
-<br>
-          masuk&nbsp;pemasaran
-        </div>
-      </div>
-    </div>
-    <div class="about__paint js-paralaxed-2">
-      <img src="img/paint2.png" alt="Paint Two">
-    </div>
+  <hr>
+  <div class="bottom-mobile">
   </div>
-</section>
-
-<section class="container darktheme" id="programm">
-  <div class="row program">
-    <h2 class="title_medium">Programnya
-</h2>
-
-    <div class="program__mobile-numbers mobile-visible">
-      <div class="info-line__numbers">
-        <span>2-3</span> <br>
-        kali в&nbsp;seminggu
-      </div>
-      <div class="info-line__numbers">
-        <span>2-5</span> <br>
-        orangnya в&nbsp;grup
-      </div>
-    </div>
-
-    <div class="about__lines">
-      <div class="info-line">
-        <div class="info-line__caption">
-          Tim и&nbsp;proyek nyata
-
-        </div>
-        <div class="info-line__desc">
-         Belajar dibangun di atas&nbsp;kerja tim dengan
-&nbsp;proyek nyata
-&nbsp;arah:
-         strategi dan
-&nbsp;merek,
-          iklan dan
-&nbsp;pemasaran konten
-, situs web dan
-&nbsp;penjualan
-.
-        </div>
-        <div class="info-line__numbers mobile-hidden">
-          <span>2-3</span> <br>
-         kali dalam
-&nbsp;seminggu
-        </div>
-      </div>
-      <div class="info-line">
-        <div class="info-line__caption mobile-hidden">
-          Perlindungan Proyek
-
-        </div>
-        <div class="info-line__desc">
-         Di akhir proyek, tim membela proyek mereka: sajikan strategi digital dan hasil yang diperoleh
-        </div>
-        <div class="info-line__numbers mobile-hidden">
-          <span>3-5</span> <br>
-         orang masuk
-&nbsp;grup
-        </div>
-      </div>
-    </div>
+  <div class="bottom">
   </div>
-</section>
-
-
-<!--DIRECTIONS-->
-<div class="js-slider-global darktheme">
-  <section class="container directiontheme">
-    <div class="row direction js-direction">
-      <div class="direction__num">
-      </div>
-      <h3 class="direction__title">Strategi</h3>
-      <div class="direction__spoiler spoiler">
-        <h4 class="spoiler__title js-spoiler">Pelajari cara membuat keunggulan kompetitif jangka panjang. Untuk membentuk
-          positioning, slogan dan RTB.
-          <div class="toggler">
-            <div class="t-line tl-1"></div>
-            <div class="t-line tl-2"></div>
-          </div>
-        </h4>
-        <hr class="hr">
-        <div class="spoiler__content js-spoiler-content">
-          <h4 class="spoiler__content-title">
-Menciptakan strategi yang kuat dan&nbsp;cinta untuk
-&nbsp;merek</h4>
-          <p>Lakukan penelitian, belajar menganalisis data. Kembangkan positioning
-            dan&nbsp;kompetitif
-           manfaat pada
-&nbsp;produk, merek dan
-&nbsp;konsumen. Lihat budaya sebagai
-            jalan
-            implementasi dari
-            strategi.</p>
-        </div>
-      </div>
-      <div class="direction__info">
-        <div><span>4</span>jam <br> teori</div>
-        <div><span>10</span>jam
- <br> praktik</div>
-      </div>
-      <div class="direction__persons js-slider">
-        <div class="person person_1">
-          <img src="img/lisa_rumyantseva.png"
-               srcset="img/lisa_rumyantseva.png 1x, assets/img/persons2x/lisa_rumyantseva.png 2x"
-               alt="Елизавета Румянцева">
-          <div class="person__info">
-            <div class="person__name">Elizaveta Rumyantseva
 </div>
-            <div class="person__desc">Pemimpin Branding
-</div>
-          </div>
-        </div>
-        <div class="person person_2">
-          <img src="img/sergey_pruss.png"
-               srcset="img/sergey_pruss.png 1x, assets/img/persons2x/sergey_pruss.png 2x"
-               alt="Сергей Прусс">
-          <div class="person__info">
-            <div class="person__name">Sergey Pruss
-</div>
-            <div class="person__desc">Ketenangan CEO dan
-&nbsp;Digitale</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="container directiontheme">
-    <div class="row direction js-direction">
-      <div class="direction__num">
-      </div>
-      <h3 class="direction__title">Situs</h3>
-      <div class="direction__spoiler spoiler">
-        <h4 class="spoiler__title js-spoiler">Bangun situs web dengan
-&nbsp;struktur, konten dan
-&nbsp;desain.
-          <div class="toggler">
-            <div class="t-line tl-1"></div>
-            <div class="t-line tl-2"></div>
-          </div>
-        </h4>
-        <hr class="hr">
-        <div class="spoiler__content js-spoiler-content">
-          <h4 class="spoiler__content-title">Apa yang membuat situs keren berbeda
-?</h4>
-          <p>Kamu adalah
-&nbsp;cari tahu mengapa perusahaan membutuhkan situs web yang bagus dan
-&nbsp;apa tugas bisnisnya?
-&nbsp;memutuskan
-            Pelajari dasar-dasarnya
-            prototyping, aturan desain yang bagus dan&nbsp;tahap pengembangan.
- </p>
-        </div>
-      </div>
-      <div class="direction__info">
-        <div><span>4</span>jam <br> teori</div>
-        <div><span>10</span>jam <br> praktik</div>
-      </div>
-      <div class="direction__persons js-slider">
-        <div class="person person_4">
-          <img src="img/semyon_stranchenko.png"
-               srcset="img/semyon_stranchenko.png 1x, assets/img/persons2x/semyon_stranchenko.png 2x"
-               alt="Павел Васильев">
-          <div class="person__info">
-            <div class="person__name">Simon Stranchenko
-</div>
-            <div class="person__desc">Pemimpin Desain
-</div>
-          </div>
-        </div>
-        <div class="person person_5">
-          <img src="img/elena_vaniushina.png"
-               srcset="img/elena_vaniushina.png 1x, assets/img/persons2x/elena_vaniushina.png 2x"
-               alt="Елена Ванюшин">
-          <div class="person__info">
-            <div class="person__name">Elena Vanyushina
-</div>
-            <div class="person__desc">UХ-sang desainer
-</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="container directiontheme">
-    <div class="row direction js-direction">
-      <div class="direction__num">
-      </div>
-      <h3 class="direction__title">Iklan</h3>
-      <div class="direction__spoiler spoiler">
-        <h4 class="spoiler__title js-spoiler">
-          Anda dapat menjalankan kampanye iklan di &nbsp; Yandex. Langsung dan &nbsp; Google
-          Iklan
-          <div class="toggler">
-            <div class="t-line tl-1"></div>
-            <div class="t-line tl-2"></div>
-          </div>
-        </h4>
-        <hr class="hr">
-        <div class="spoiler__content js-spoiler-content">
-          <h4 class="spoiler__content-title">Cara mendapatkan hasil maksimal dari & nbsp; iklan kontekstual </h4>
-          <p> Berkenalan dengan jenis &nbsp; jenis iklan dan &nbsp; fitur Yandex.Direct dan &nbsp; sistem periklanan Google
-            Iklan
-            Pelajari sendiri cara menjalankan iklan kontekstual: tetapkan tujuan dan &nbsp; struktur
-            akun
-            kumpulkan semantik, tulis teks, bongkar dan &nbsp; sesuaikan kampanye iklan.</p>
-        </div>
-      </div>
-      <div class="direction__info">
-        <div><span>5</span>jam <br> teori</div>
-        <div><span>10</span>jam <br> praktik</div>
-      </div>
-      <div class="direction__persons">
-        <div class="person person_6">
-          <img src="img/ekaterina_stepanova.png"
-               srcset="img/ekaterina_stepanova.png 1x, assets/img/persons2x/ekaterina_stepanova.png 2x"
-               alt="Анастасия Король">
-          <div class="person__info">
-            <div class="person__name">Ekaterina Stepanova
-</div>
-            <div class="person__desc">Pemimpin &laquo; Iklan &raquo;
-</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <section class="container directiontheme">
-    <div class="row direction js-direction">
-      <div class="direction__num">
-      </div>
-      <h3 class="direction__title">Analisis</h3>
-      <div class="direction__spoiler spoiler">
-        <h4 class="spoiler__title js-spoiler">
-          
-Pelajari cara mengonfigurasi analitik web di &nbsp; situs web dan & nbsp; mengoptimalkan kampanye iklan berdasarkan &nbsp;
-          data.
-          <div class="toggler">
-            <div class="t-line tl-1"></div>
-            <div class="t-line tl-2"></div>
-          </div>
-        </h4>
-        <hr class="hr">
-        <div class="spoiler__content js-spoiler-content">
-          <h4 class="spoiler__content-title">Cara melacak kinerja pemasaran
-</h4>
-          <p>Berkenalan dengan sistem Yandex.Metrica &nbsp; Google Analytics &nbsp;, pelajari cara mengonfigurasi
-            counter dan
-            tujuan.
-            Pelajari cara mengoptimalkan kampanye iklan dengan tag &nbsp; utm. </p>
-        </div>
-      </div>
-      <div class="direction__info">
-        <div><span>3</span>jam <br> teori</div>
-        <div><span>6</span>jam <br> praktik</div>
-      </div>
-      <div class="direction__persons">
-        <div class="person person_7">
-          <img src="img/seigarov.png"
-               srcset="img/seigarov.png 1x, assets/img/persons2x/seigarov.png 2x"
-               alt="Александр Сейгаров">
-          <div class="person__info">
-            <div class="person__name">Alexander Seigarov
-</div>
-            <div class="person__desc">
-Yandex &nbsp; Pakar Pelatihan, Ketua Tim
-              Ketenangan
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <section class="container directiontheme">
-    <div class="row direction js-direction">
-      <div class="direction__num">
-      </div>
-      <h3 class="direction__title">Pemasaran konten
-</h3>
-      <div class="direction__spoiler spoiler">
-        <h4 class="spoiler__title js-spoiler">Pelajari cara membuat konten dan &nbsp; menjual posting di &nbsp; jejaring sosial.
-          Lari
-          Iklan VKontakte, Facebook, Instagram, dan Odnoklassniki.
-          <div class="toggler">
-            <div class="t-line tl-1"></div>
-            <div class="t-line tl-2"></div>
-          </div>
-        </h4>
-        <hr class="hr">
-        <div class="spoiler__content js-spoiler-content">
-          <h4 class="spoiler__content-title">Cara membuat dan &nbsp; mempromosikan konten berkualitas </h4>
-          <p> Anda akan mempelajari apa itu pemasaran konten; cara membuat konten yang menarik dan berkualitas itu
-            akan memecahkan masalah audiens bisnis. Juga periksa saluran distribusi konten dan
-            fitur konten di setiap saluran. Cara membuat dan & nbsp; mempromosikan konten berkualitas </h4>
-          <p> Anda akan mempelajari apa itu pemasaran konten; cara membuat konten yang menarik dan berkualitas itu
-            akan memecahkan masalah audiens bisnis. Juga periksa saluran distribusi konten dan
-            fitur konten di setiap saluran.
-          </p>
-        </div>
-      </div>
-      <div class="direction__info">
-        <div><span>5</span>jam <br> teori</div>
-        <div><span>10</span>jam <br> praktik</div>
-      </div>
-      <div class="direction__persons js-slider">
-        <div class="person person_8">
-          <img src="img/natasha_kalashnikova.png"
-               srcset="img/natasha_kalashnikova.png 1x, assets/img/persons2x/natasha_kalashnikova.png 2x"
-               alt="Наталья Калашникова">
-          <div class="person__info">
-            <div class="person__name">Natalya Kalashnikova
-</div>
-            <div class="person__desc">Pemimpin Konten Visual
-</div>
-          </div>
-        </div>
-        <div class="person person_9">
-          <img src="img/stas_ch.png"
-               srcset="img/stas_ch.png 1x, assets/img/persons2x/stas_ch.png 2x"
-               alt="Стас Черикчиев">
-          <div class="person__info">
-            <div class="person__name">Stas Cherikchiev
-</div>
-            <div class="person__desc">Pemimpin Industri & Pemasaran, Pemasaran Konten &raquo;</div>
-          </div>
-        </div>
-        <div class="person person_10">
-          <img src="img/vadim_malygin.png"
-               srcset="img/vadim_malygin.png 1x, assets/img/persons2x/vadim_malygin.png 2x"
-               alt="Вадим Малыгин">
-          <div class="person__info">
-            <div class="person__name">Vadim Malygin
-</div>
-            <div class="person__desc">Editor Pemasaran Konten
-</div>
-          </div>
-        </div>
-        <div class="person person_11">
-          <img src="img/dasha_petr.png"
-               srcset="img/dasha_petr.png 1x, assets/img/persons2x/dasha_petr.png 2x"
-               alt="Дарья Петриченко">
-          <div class="person__info">
-            <div class="person__name">Daria Petrichenko
-</div>
-            <div class="person__desc">Pakar Penargetan
-</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <section class="container directiontheme">
-    <div class="row direction js-direction">
-      <div class="direction__num">
-      </div>
-      <h3 class="direction__title">Penjualan dan
-&nbsp;CRM</h3>
-      <div class="direction__spoiler spoiler">
-        <h4 class="spoiler__title js-spoiler">
-Pelajari cara merancang sistem penjualan. Integrasikan situs web
-          iklan
-          dan&nbsp;analitik
- с&nbsp;CRM.
-          <div class="toggler">
-            <div class="t-line tl-1"></div>
-            <div class="t-line tl-2"></div>
-          </div>
-        </h4>
-        <hr class="hr">
-        <div class="spoiler__content js-spoiler-content">
-          <h4 class="spoiler__content-title">Cara membuat dan &nbsp; mengembangkan sistem penjualan </h4>
-          <p> Bersama-sama kami akan merancang sistem penjualan. Kami akan mengonfigurasi dan mengintegrasikan sistem CRM dengan analitik dan situs web.
-            Kami mempelajari antarmuka sistem CRM: transaksi, kontak, tugas otomatis.
-          </p>
-        </div>
-      </div>
-      <div class="direction__info">
-        <div><span>4</span>jam <br> teori</div>
-        <div><span>9</span>jam <br> praktik</div>
-      </div>
-      <div class="direction__persons">
-        <div class="person person_12">
-          <img src="img/sasha_chakhlov.png"
-               srcset="img/sasha_chakhlov.png 1x, assets/img/persons2x/sasha_chakhlov.png 2x"
-               alt="Артем Боровец">
-          <div class="person__info">
-            <div class="person__name">Alexander Chakhlov
-</div>
-            <div class="person__desc">Ketenangan Direktur Komersial
-</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-<!--END DIRECTIONS-->
-
-<!--PRICE-->
-<section class="container" id="prices">
-  <div class="row prices">
-    <h3 class="title_medium">Biaya</h3>
-
-    <div class="prices__desc">
-      Pelatihan meliputi: akses ke semua kuliah, instruksi dan materi video, mengerjakan proyek nyata,
-      saran guru.
+<script type="text/template" id="hotkeyTemplate">
+  <% if ((browser.isOpera || browser.isFirefox || browser.isChrome) && browser.isMac) { %>
+  <span class="key">⌘</span> + <span class="key">R</span>
+  <% } %>
+  <% if ((browser.isOpera || browser.isFirefox || browser.isChrome) && !browser.isMac) { %>
+  <span class="key">Ctrl</span> + <span class="key">R</span>
+  <% } %>
+  <% if (browser.isIE || browser.isEdge) { %>
+  <span class="key">Ctrl</span> + <span class="key">F5</span>
+  <% } %>
+  <% if (browser.isSafari) { %>
+  <span class="key">⌥</span> + <span class="key">⌘</span> + <span class="key">E</span>
+  <% } %>
+</script>
+<script type="text/template" id="instructionTemplateRu">
+  <div>
+    <% _.forEach(data, function(item, index) { %>
+    <div class="instruction-row">
+      <div><%- index + 1 %>. <%- item.text %></div>
+      <% if (item.image) { %>
+      <a href="<%- item.image.normal %>" data-srcset="<%- item.image.normal %> 1x, <%- item.image.retina %> 2x"
+         data-fancybox="instruction" data-caption="<%- item.text %>">
+        <img src="<%- item.image.normal %>" srcset="<%- item.image.normal %> 1x, <%- item.image.retina %> 2x" width="99"
+             alt="<%- item.text %>">
+      </a>
+      <% } %>
     </div>
 
-    <div class="prices__cols">
-      <div class="prices__col">
-        <h4 class="title_small">Tarif <br>dan deskripsi
-</h4>
-        <p>Angsuran bebas bunga
-</p>
-      
-      </div>
-      <div class="prices__col prices__col_bordered">
-        <h4 class="title_small">Pemasar</h4>
-        <p class="border-bottom">Berlatihlah pada proyek nyata sebagai sebuah tim. Hanya 17 tempat.
-</p>
-        <div class="prices__price">
-          490 000 IDR
-        </div>
-        <p><a href="#form" class="button prices__button js-anchor js-to-form">Mendaftar
-</a></p>
-      </div>
-      <div class="prices__col prices__col_bordered">
-        <h4 class="title_small">Pengusaha
-</h4>
-        <p class="border-bottom">Berlatihlah dalam proyek Anda bersama tim yang memiliki orang-orang yang berpikiran sama.
-          Hanya 8 tempat</p>
-        <div class="prices__price">
-           490 000 IDR
-        </div>
-        <p><a href="#form" class="button prices__button js-anchor js-to-form">Mendaftar</a></p>
-        <p class="prices__price-description">Harga sudah termasuk 15.000 ₽ untuk iklan.</p>
-      </div>
-    </div>
+    <% }) %>
   </div>
-</section>
-
-
-<section class="container" id="knowledge">
-  <div class="row knowledge">
-    <h3 class="title_medium knowledge__title">Pengetahuan dan &nbsp; keterampilan
-</h3>
-    <div class="knowledge__box_1">
-
-      <div class="knowledge__pays pays">
-        <p class="pays__count">3 bulan ini
-</p>
-        <p class="pays__desc">Selama waktu ini, Anda dapat membangun sistem yang efektif untuk mempromosikan proyek Anda</p>
-
-        <p class="pays__count">490 000 IDR</p>
-        
-      </div>
-    </div>
-    <div class="knowledge__box_2">
-      <img src="img/knowleage.png"
-           srcset="img/knowleage.png 1x, assets/img/knowleagex2.png 2x"
-           alt="knowledge">
-    </div>
+</script>
+<script type="text/template" id="instructionTemplateEn">
+  <% if (browser.isFirefox) { %>
+  <div>
+    <div class="instruction-row">1. Open the browser menu (three horizontal bars in the upper right corner of the window)</div>
+    <div class="instruction-row">2. Select "Preferences"</div>
+    <div class="instruction-row">3. Go to the "Privacy & Security" section.</div>
+    <div class="instruction-row">4. Click "Clear history..."</div>
+    <div class="instruction-row">5. In the window that appears, click "Clear Now”</div>
   </div>
-
-  <div class="row skills">
-    <h4 class="title_small">Keterampilan</h4>
-    <div class="skills__box">
-      <div class="skills__box-col">
-        <p>
-Bekerja di tim &nbsp; dan &nbsp; kepemimpinan</p>
-        <p>Menciptakan strategi digital
-</p>
-        <p>Dasar-dasar penentuan posisi dan &nbsp; branding
-</p>
-      </div>
-      <div class="skills__box-col">
-        <p>Bekerja dengan &nbsp; sistem CRM</p>
-        <p>Bekerja dengan &nbsp; Google Analytics dan & nbsp; Yandex.Metrica
-</p>
-        <p>Siapkan iklan yang ditargetkan
-</p>
-      </div>
-      <div class="skills__box-col">
-        <p>Menyiapkan kampanye iklan di & nbsp; Google Ads dan & nbsp; Yandex.Direct
-</p>
-        <p>Membangun sistem penjualan
-</p>
-        <p>Menetapkan KPI dan & nbsp; perencanaan media
-</p>
-      </div>
-      <div class="skills__box-col">
-        <p>Menulis dan &nbsp; pengeditan konten
-</p>
-        <p>Analisis Kinerja Pemasaran
-</p>
-        <p>Pengembangan situs web di Tilda
-</p>
-      </div>
-
-    </div>
+  <% } %>
+  <% if (browser.isChrome && !browser.isYandex) { %>
+  <div>
+    <div class="instruction-row">1. Open the browser menu (three horizontal bars in the upper right corner of the window)</div>
+    <div class="instruction-row">2. Select "More tools" > "Clear browsing data..."</div>
+    <div class="instruction-row">3. Click "Clear data"</div>
   </div>
-  <div class="row technologies">
-    <h4 class="title_small technologies__title">Teknologi</h4>
-    <div class="technologies__icons">
-      <span data-id="1" class="js-icon active"><img src="fonts/icon-1.svg" alt=""></span>
-      <span data-id="2" class="js-icon"><img src="fonts/icon-2.svg" alt=""></span>
-      <span data-id="3" class="js-icon"><img src="fonts/icon-3.svg" alt=""></span>
-      <span data-id="4" class="js-icon"><img src="fonts/icon-4.svg" alt=""></span>
-      <span data-id="5" class="js-icon"><img src="fonts/icon-5.svg" alt=""></span>
-      <span data-id="7" class="js-icon"><img src="fonts/icon-7.svg" alt=""></span>
-      <span data-id="8" class="js-icon"><img src="fonts/icon-8.svg" alt=""></span>
-      <span data-id="9" class="js-icon"><img src="fonts/icon-9.svg" alt=""></span>
-      <span style="opacity: 0;"></span>
-    </div>
-    <div class="technologies__desc">
-      <p class="tech tech-1 active">
-        Tilda Publishing adalah pembangun situs yang menggantikan seorang programmer, perancang, dan perancang tata letak. Platform
-        memungkinkan Anda secara mandiri membuat situs dari blok siap pakai dari pendaratan ke toko online.
-      </p>
-      <p class="tech tech-2">
-        Google Ads adalah layanan untuk beriklan di hasil pencarian dan Jaringan Display Google.
- </p>
-      <p class="tech tech-3">
-       Google Analytics adalah alat untuk menganalisis statistik pengunjung situs. Membantu Mengoptimalkan Sumber
-        lalu lintas menggunakan data.
-      </p>
-      <p class="tech tech-4">
-       Yandex.Direct - layanan untuk beriklan di hasil pencarian dan di situs mitra jaringan periklanan Yandex.
-</p>
-      <p class="tech tech-5">
-        Yandex.Metrica adalah alat untuk menganalisis statistik kunjungan situs. Memungkinkan Anda untuk mengoptimalkan sumber dan
-        Tingkatkan kualitas lalu lintas, evaluasi efektivitas iklan.
-      </p>
-      <p class="tech tech-7">
-        Facebook adalah jaringan sosial internasional dan saluran promosi bisnis di Facebook dan Instagram. Memungkinkan Anda untuk berlari
-        dan mengoptimalkan iklan untuk mencapai berbagai tujuan: lalu lintas, keterlibatan, jangkauan.</p>
-      <p class="tech tech-8">
-       
-VKontakte adalah jejaring sosial dengan pemirsa terbesar di Runet. Untuk bisnis - alat promosi melalui
-        fitur komunitas, iklan bertarget dan penggoda.</p>
-      <p class="tech tech-9">
-        AmoCRM adalah sistem otomasi penjualan online. Ini membantu untuk mengumpulkan aplikasi dari berbagai saluran, menganalisis
-        penjualan, hitung ROMI dan LTV.
-      </p>
-    </div>
-
-    <div class="youlearn__bg">
-      <img src="img/bg_learning.png" alt="">
-    </div>
+  <% } %>
+  <% if (browser.isSafari) { %>
+  <div>
+    <div class="instruction-row">1. In the menu bar select “Safari” > “Preferences”</div>
+    <div class="instruction-row">2. Enable “Show Develop menu in menu bar” in Advanced section and close the window</div>
+    <div class="instruction-row">3. In the menu bar select “Develop” > “Empty caches”</div>
   </div>
-
- 
-</section>
-
-<section class="container">
-  <div class="row reviews">
-    <h2 class="title_medium reviews__title">Ulasan</h2>
-    <p class="reviews__disclaimer"> Dalam setiap kasus individu, hasilnya dapat bervariasi.
-</p>
-    <div class="reviews__box first-two">
-
-      <div class="reviews__item review">
-        <div class="review__author-info">
-          <div class="review__author-photo">
-            <img src="img/gudoshnikov.jpg" alt="Review author">
-          </div>
-          <div class="review__author-wrap">
-            <div class="review__author-name">Ilya Gudoshnikov
-</div>
-            <div class="review__author-role">Pengusaha
-</div>
-          </div>
-        </div>
-        <div class="review__theme">Mendapat pengetahuan yang berlaku dalam kehidupan nyata
-</div>
-        <div class="review__text">Saya ingin mendapatkan pengetahuan tentang promosi B2B. Saya suka ada kesempatan
-          berkomunikasi dengan guru secara individu di proyek.
-        </div>
-        <div class="review__play-button">
-          <a class="play js-play-video" href="#" data-link="https://www.youtube.com/embed/C8zcdZODw7g">
-            <img src="fonts/play.svg" alt="">
-          </a>
-          <span class="play-text">
-Tonton panggilan video</span>
-        </div>
-      </div>
-
-      <div class="reviews__item review">
-        <div class="review__author-info">
-          <div class="review__author-photo">
-            <img src="img/ziborov.jpg" alt="Review author">
-          </div>
-          <div class="review__author-wrap">
-            <div class="review__author-name">Nikolai Zibrov</div>
-            <div class="review__author-role">Pemasar
-</div>
-          </div>
-        </div>
-        <div class="review__theme">Teori berjalan dengan benar</div>
-        <div class="review__text">Saya jadi mengerti bagaimana pemasaran terintegrasi bekerja. Belajar banyak
-          informasi dalam waktu singkat. Saya suka bahwa teori datang segera dengan latihan.
-        </div>
-        <div class="review__play-button">
-          <a class="play js-play-video" href="#" data-link="https://www.youtube.com/embed/2D2L-3raLBI">
-            <img src="fonts/play.svg" alt="">
-          </a>
-          <span class="play-text">Tonton panggilan video</span>
-        </div>
-      </div>
-
-      <div class="reviews__item review">
-        <div class="review__author-info">
-          <div class="review__author-photo">
-            <img src="img/ilina.jpg" alt="Review author">
-          </div>
-          <div class="review__author-wrap">
-            <div class="review__author-name">Anna Ilyina</div>
-            <div class="review__author-role">
-Pemasar</div>
-          </div>
-        </div>
-        <div class="review__theme">
-Anda menyaksikan kelahiran proyek besar</div>
-        <div class="review__text">Blok yang paling produktif dan berguna tampaknya memblokir iklan kontekstual. Hal yang keren
-          bahwa semua pekerjaan diatur secara bertahap dan Anda dapat melihat bagaimana keseluruhan proyek lahir dari ketiadaan.
-        </div>
-        <div class="review__play-button">
-          <a class="play js-play-video" href="#" data-link="https://www.youtube.com/embed/velCTtU42rQ">
-            <img src="fonts/play.svg" alt="">
-          </a>
-          <span class="play-text">
-Tonton panggilan video</span>
-        </div>
-      </div>
-
-      <div class="reviews__item review">
-        <div class="review__author-info">
-          <div class="review__author-photo">
-            <img src="img/smirnov.jpg" alt="Review author">
-          </div>
-          <div class="review__author-wrap">
-            <div class="review__author-name">Vyacheslav Smirnov</div>
-            <div class="review__author-role">
-Pengusaha</div>
-          </div>
-        </div>
-        <div class="review__theme">Punya waktu yang fantastis dan pelajari keterampilan yang berguna </div>
-        <div class = "review__text"> Mendapat keterampilan yang berguna dalam kursus Serenity. Menyukai suasana yang indah di
-          tim. Guru yang luar biasa.
-        </div>
-        <div class="review__play-button">
-          <a class="play js-play-video" href="#" data-link="https://www.youtube.com/embed/95mIIXDsM2Q">
-            <img src="fonts/play.svg" alt="">
-          </a>
-          <span class="play-text">Tonton panggilan video</span>
-        </div>
-      </div>
-
-      <div class="reviews__item review">
-        <div class="review__author-info">
-          <div class="review__author-photo">
-            <img src="img/andrianov.jpg" alt="Review author">
-          </div>
-          <div class="review__author-wrap">
-            <div class="review__author-name">Maximilian Andriyanov</div>
-            <div class="review__author-role">Pengusaha</div>
-          </div>
-        </div>
-        <div class="review__theme">Pelajari cara menerapkan pengetahuan ini kepada karyawan </div>
-        <div class = "review__text"> Sekolah mengajar secara komprehensif dan mendalam, banyak analitik. Merekomendasikan sekolah
-          Pengusaha yang ingin mengembangkan strategi pemasaran mereka sendiri untuk perusahaan mereka atau
-          kontrol departemen pemasaran Anda.
-        </div>
-        <div class="review__play-button">
-          <a class="play js-play-video" href="#" data-link="https://www.youtube.com/embed/_DwIcPuLw6w">
-            <img src="fonts/play.svg" alt="">
-          </a>
-          <span class="play-text">Tonton panggilan video</span>
-        </div>
-      </div>
-    </div>
-    <div class="reviews__button-box">
-      <a href="#" class="button button_transparent js-show-all-reviews">
-Tampilkan lebih banyak</a>
-    </div>
+  <% } %>
+  <% if (browser.isYandex) { %>
+  <div>
+    <div class="instruction-row">1. Open the browser menu (three horizontal bars in the upper right corner of the window)</div>
+    <div class="instruction-row">2. Go to the "History" > "Settings - Clear browsing data"</div>
+    <div class="instruction-row">3. Select "Cookies and other site data" and "Cached files", click "Clear browsing data"</div>
   </div>
-</section>
-
-<section class="container" id="faq">
-  <div class="row questions">
-    <h2 class="title_medium">
-Jawaban untuk &nbsp; pertanyaan</h2>
-    <div class="questions__box">
-      
-      <div class="questions__item js-question">
-        <div class="questions__toggle">
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-        </div>
-        <h5 class="js-open-spoiler">Bagaimana pelatihannya?</h5>
-        <p>
-          Pelatihan dibangun di atas kerja tim. Tim dibentuk di sekitar proyek nyata
-          anggaran dialokasikan.
-         <br> Situs
-          Kelas diadakan 2-3 kali seminggu.
-        </p>
-      </div>
-      <div class="questions__item js-question">
-        <div class="questions__toggle">
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-        </div>
-        <h5 class="js-open-spoiler">Bagaimana jika &nbsp; Saya tidak punya proyek?</h5>
-        <p>Kami akan memasukkan Anda dalam grup dengan proyek, dan Anda akan dapat mengasah keterampilan Anda dalam bisnis nyata.</p>
-      </div>
-      <div class="questions__item js-question">
-        <div class="questions__toggle">
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-        </div>
-        <h5 class="js-open-spoiler">Dokumen apa yang akan saya terima setelah pelatihan?</h5>
-        <p>Sertifikat &nbsp; penyelesaian kursus dengan &nbsp; deskripsi keterampilan yang diperoleh dan & nbsp; pengetahuan di bidang &nbsp;
-          belajar.
-        </p>
-      </div>
-      <div class="questions__item js-question">
-        <div class="questions__toggle">
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-        </div>
-        <h5 class="js-open-spoiler">
-Bagaimana praktiknya diatur?</h5>
-        <p>Latihan ini berlangsung dalam tim yang terdiri dari 3-4 orang di proyek nyata. Anda akan menyelesaikan tugas
-          bersama-sama dan secara individu. Guru akan memberikan umpan balik di kelas dan dari jarak jauh.
-        </p>
-      </div>
-
-      <div class="questions__item js-question">
-        <div class="questions__toggle">
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-        </div>
-        <h5 class="js-open-spoiler">Di &nbsp; berapa anggaran proyek?</h5>
-        <p>Anggaran proyek digunakan untuk beriklan di jejaring sosial VKontakte, Fabecook atau Instagram, periklanan kontekstual di
-          Yandex.Direct dan
-          Iklan Google
-        </p>
-      </div>
-
-      <div class="questions__item js-question">
-        <div class="questions__toggle">
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-        </div>
-        <h5 class="js-open-spoiler">Perlu berinvestasi di & nbsp; promosi proyek?</h5>
-        <p>Tidak, alat yang diperlukan gratis. Anggaran penargetan dan kontekstual sudah termasuk
-          dalam biaya partisipasi paket "Pengusaha".</p>
-      </div>
-
-
-      <div class="questions__item js-question">
-        <div class="questions__toggle">
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-        </div>
-        <h5 class="js-open-spoiler">Kapan kelas akan diadakan?</h5>
-        <p>
-Pada &nbsp; Selasa dan &nbsp; Kamis dari &nbsp; 19:30 hingga &nbsp; 22:00, plus kelas opsional.</p>
-      </div>
-
-
-      <div class="questions__item js-question">
-        <div class="questions__toggle">
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-        </div>
-        <h5 class="js-open-spoiler">Untuk tingkat pelatihan apa?</h5>
-        <p>elatihan ini cocok untuk orang-orang tanpa pengalaman pemasaran, spesialis dengan pemahaman dasar
-          Pemasaran Internet, nol atau pengalaman minimal dalam bekerja dengan alat digital "dengan tangan".<br> Situs
-          Selain itu, pelatihan akan bermanfaat bagi spesialis di bidang pemasaran tertentu atau profesi terkait yang ingin melakukannya
-          Dapatkan gambaran lengkap tentang promosi digital terintegrasi.</p>
-      </div>
-
-      <div class="questions__item js-question">
-        <div class="questions__toggle">
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-        </div>
-        <h5 class="js-open-spoiler">Bisakah saya mendapatkan catatan kelas?</h5>
-        <p>Tidak. Kelas utama dibangun dalam praktik dan karenanya tidak direkam. Anda bisa kembali ke materi
-          ceramah tentang presentasi.</p>
-      </div>
-
-
-    </div>
+  <% } %>
+  <% if (browser.isOpera) { %>
+  <div>
+    <div class="instruction-row">1. Type ”opera://settings/clearBrowserData" in the address bar, press Enter</div>
+    <div class="instruction-row">2. Select "Cookies and other site data" and "Cached images and files", click "Clear browsing data"</div>
   </div>
-</section>
-
-<section id="form" class="container darktheme footer-form js-order-form">
-  <div class="row form">
-    <div class="form__title">
-      <h2 class="title_big form__title-title">Rekam</h2>
-      <p class="form__title-desc mobile-hidden">KalTim, <br> Gg. Labu No. 546, Bitung 67596</p>
-      <img class="form__jet mobile-hidden" src="img/aircraft.png" alt="Jet">
-    </div>
-    <div class="form__form">
-       
-                            <form class="orderForm" method="GET" action="/thanks.html">
-                                
-<div class="t-input-group t-input-group_nm" data-input-lid="1496238250184"> 
- <div class="t-input-block"> 
-<input type="text" name="name" class="t-input js-tilda-rule" placeholder="Masukkan nama Anda" required style="color:#000000; border:0px solid #000; background-color:#ffffff;> <br><br>
-           </div>
- </div>         </div>          <br>
-
-<div class="t-input-group t-input-group_nm"> 
- <div class="t-input-block"> 
-  <input type="text" name="name" class="t-input js-tilda-rule" onkeyup="this.value=this.value.replace(/\s/,'')" minlength="5"  name="phone" placeholder="Nomor Telepon" required style="color:#000000; border:0px solid #000; background-color:#ffffff;> 
-    </div>
- </div>     <br>      
-<div class="t-input-block">  
- <div class="t-form__submit"> 
- <button type="submit" class="t-submit" style="color:#ffffff;background-color:#ff5c33;border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px;" >Kirim aplikasi!</button> 
-                           </div>
-						   </form>
-
-    </div>
+  <% } %>
+  <% if (browser.isIE) { %>
+  <div>
+    <div class="instruction-row">1. Select “Tools” > “Delete browsing history"</div>
+    <div class="instruction-row">2. Select “Temporary Internet files and website files” and press “Delete”</div>
   </div>
-</section>
+  <% } %>
+</script>
+<script type="text/template" id="cacheTemplateRu">
+  <div class="hint">
+    <h2>Проблема уже решена? Попробуйте сбросить кэш</h2>
+    <ul class="fa-ul">
+      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a class="clear-cache"
+                                                                          onclick="clearCache(event)" href="#">Очистите
+        кэш автоматически</a></li>
+      <% if (browser.isSafari) { %>
+      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Нажмите <b id="hotkey"></b>, затем перезагрузите
+        страницу.
+      </li>
+      <% } else { %>
+      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Перезагрузите страницу, нажав <b id="hotkey"></b>
+      </li>
+      <% } %>
+      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a onclick="toggleInstruction(event)" href="#">Очистите кэш из настроек браузера <i class="fas fa-angle-down instruction-collapse-angle"></i></a>
+        <div class="gallery">
+          <div id="instruction"></div>
+          Если не помогло - вы можете связаться с нашей службой технической поддержки с помощью раздела «Обратная связь»
+          в панели управления хостингом или любым удобным для вас способом.
+        </div>
+      </li>
 
-<footer>
-  <div class="row footer">
-    <div class="footer__social">
-      <a href="http://instagram.com/serenity.school" target="_blank"><img src="fonts/inst.svg" alt=""></a>
-      <a href="https://vk.com/serenity_school" target="_blank"><img src="fonts/vk.svg" alt=""></a>
-      <a href="https://www.facebook.com/schoolserenity" target="_blank"><img src="fonts/fb.svg" alt=""></a>
-       </div>
-    <div style="display: none;">+62912 2468 1929</div>
-    <div class="footer__copy">
-      &copy;&nbsp;2019-2020 Serenity <br>
+    </ul>
+  </div>
+</script>
+<script type="text/template" id="cacheTemplateEn">
+  <div class="hint">
+    <h2>Is the problem solved? Try to reset the cache</h2>
+    <ul class="fa-ul">
+      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a class="clear-cache"
+                                                                          onclick="clearCache(event)" href="#">Clear the
+        cache automatically</a></li>
+      <% if (browser.isSafari) { %>
+      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Press <b id="hotkey"></b> and reload the page
+      </li>
+      <% } else { %>
+      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Reload the page by pressing <b id="hotkey"></b>
+      </li>
+      <% } %>
+      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a onclick="toggleInstruction(event)" href="#">Clear the cache from your browser settings <i class="fas fa-angle-down instruction-collapse-angle"></i></a>
+        <div class="gallery">
+          <div id="instruction"></div>
+          If it does not help - you can contact our technical support service using the "Feedback" section in the
+          hosting management panel or in any way convenient for you.
+        </div>
+      </li>
+    </ul>
+  </div>
+</script>
+<script type="text/template" id="bottomEn">
+  <footer>
+    <div class="footer-col">
+      <div>Support:</div>
     </div>
-  </div>
-</footer>
-
-
-<section class="container final hide js-final">
-  <div class="row">
-    <h5 class="title_big">Aplikasi berhasil diterima</h5>
-    <p>Terima kasih atas minat &nbsp; pada kursus &nbsp ;. Kami &nbsp; akan menghubungi Anda untuk mengklarifikasi detail entri
-      dan &nbsp; pembayaran.</p>
-  </div>
-  <div class="close js-close">
-    <div class="c-line c-line-1"></div>
-    <div class="c-line c-line-2"></div>
-  </div>
-</section>
-
-
-<section class="container video hide js-video">
-  <div class="row video-box">
-    <div class="close js-close">
-      <div class="c-line c-line-1"></div>
-      <div class="c-line c-line-2"></div>
+    <div class="footer-col" style="padding-right: 100px;">
+      <a href="mailto:support@beget.com">support@beget.com</a>
     </div>
-    <div id="video" class="video__wrap"></div>
-  </div>
-</section>
+    <div class="footer-col">
+      <div>Management:</div>
+    </div>
+    <div class="footer-col">
+      <a href="mailto:manager@beget.com">manager@beget.com</a>
+    </div>
+  </footer>
+</script>
+<script type="text/template" id="bottomRu">
+  <footer>
+    <div class="footer-col">
+      <div>Тех. поддержка:</div>
+      <div>Бухгалтерия:</div>
+      <div>Руководство:</div>
+      <div>Telegram:</div>
+      <div>Skype:</div>
+    </div>
+    <div class="footer-col" style="padding-right: 100px;">
+      <a href="mailto:support@beget.com">support@beget.com</a>
+      <a href="mailto:bills@beget.com">bills@beget.com</a>
+      <a href="mailto:manager@beget.com">manager@beget.com</a>
+      <a href="tg://resolve?domain=begetbot">@begetbot</a>
+      <a href="https://join.skype.com/bot/ceda3526-d09b-4157-b6f0-91a646073c7e?add" target="_blank">Добавить в контакты</a>
+    </div>
+    <div class="footer-col">
+      <div>Россия:</div>
+      <div>СПб:</div>
+      <div>Москва:</div>
+      <div>Украина:</div>
+      <div>Киев:</div>
+    </div>
+    <div class="footer-col">
+      <b>+7 (800) 700-06-08</b>
+      <b>+7 (812) 3854136</b>
+      <b>+7 (495) 721-80-88</b>
+      <b>+380 (800) 802-192</b>
+      <b>+380 (44) 300-02-18</b>
+    </div>
+  </footer>
+</script>
+<script type="text/template" id="bottomMobileEn">
+  <footer>
+    <h2>Support</h2>
+    <p><txt>Mail: </txt><span><a href="mailto:support@beget.com">support@beget.com</a></span></p>
+  </footer>
+</script>
+<script type="text/template" id="bottomMobileRu">
+  <footer>
+    <h2>Тех. поддержка</h2>
+    <p><txt>Почта: </txt><span><a href="mailto:support@beget.com">support@beget.com</a></span></p>
+    <p><txt>Россия:</txt> <span>+7 (800) 700-06-08</span></p>
+    <p><txt>Украина:</txt> <span>+380 (800) 802-192</span></p>
+  </footer>
+</script>
 
+<script>
+    var browser = {
+        // Opera 8.0+
+        isOpera: (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0,
+        // Firefox 1.0+
+        isFirefox: typeof InstallTrigger !== 'undefined',
+        // Safari 3.0+ "[object HTMLElementConstructor]"
+        isSafari: /constructor/i.test(window.HTMLElement) || (function (p) {
+            return p.toString() === "[object SafariRemoteNotification]";
+        })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)),
+        // Internet Explorer 6-11
+        isIE: /*@cc_on!@*/false || !!document.documentMode,
+        // Edge 20+
+        isEdge: !(/*@cc_on!@*/false || !!document.documentMode) && !!window.StyleMedia,
+        // Chrome 1+
+        isChrome: !!window.chrome && !!window.chrome.webstore,
+        isYandex: !!window.yandex,
+        isMac: window.navigator.platform.toUpperCase().indexOf('MAC') >= 0
+    };
+
+    var instructions = {
+        firefox: [
+            {
+                "text": "Откройте меню браузера (три горизонтальные полоски в правом верхнем углу окна)"
+            },
+            {
+                "text": 'Выберите "Настройки"',
+                "image": {
+                    normal: "https://cp.beget.com/shared/9fc46578a3f3beebbc6e3058537a3fcf/firefox2.png",
+                    "retina": "https://cp.beget.com/shared/5fc2dd546f53e0902e15a3a70e4fe653/firefox22x.png"
+                }
+            },
+            {
+                "text": 'Перейдите в раздел “Приватность и защита”',
+                "image": {
+                    normal: "https://cp.beget.com/shared/6b5c3dfee3602b060a644965f11eabed/firefox3.png",
+                    "retina": "https://cp.beget.com/shared/1f93b61fdeeed1161d5ff5aa36e76dc4/firefox32x.png"
+                }
+            },
+            {
+                "text": 'Нажмите кнопку "Удалить историю"',
+                "image": {
+                    normal: "https://cp.beget.com/shared/a41c785d3b44adcba2e1b90db2b77a37/firefox4.png",
+                    "retina": "https://cp.beget.com/shared/1a512f91bcc8975205f979acf71d7d29/firefox42x.png"
+                }
+            },
+            {
+                "text": 'В появившемся окне нажмите “Удалить сейчас”',
+                "image": {
+                    "normal": "https://cp.beget.com/shared/a4f7c26338626b94ead39246a91aa4b3/firefox5.png",
+                    "retina": "https://cp.beget.com/shared/745b3450fc1f4471ff21f6d64fc737b1/firefox52x.png"
+                }
+            }
+
+        ],
+        chrome: [
+            {
+                "text": "Откройте меню браузера (три горизонтальные полоски в правом верхнем углу окна)"
+            },
+            {
+                "text": 'Выберите "Дополнительные инструменты" > "Очистить данные просмотров"',
+                "image": {
+                    "normal": "https://cp.beget.com/shared/f38d02735868ba6f0f0f6d0056fcb600/chrome2.png",
+                    "retina": "https://cp.beget.com/shared/3c7ced0b4d09861e1884f5661f239fc0/chrome22x.png"
+                }
+            },
+            {
+                "text": 'В окне "Очистить историю" выберите "Изображения и другие файлы, сохранённые в кэше" и нажмите кнопку "Удалить данные"',
+                "image": {
+                    "normal": "https://cp.beget.com/shared/82ed82f2d8ca8099998398f34f6aa01a/chrome3.png",
+                    "retina": "https://cp.beget.com/shared/5433ccd2ab6359de9db5b621c3a0b633/chrome32x.png"
+                }
+            }
+
+        ],
+        safari: [
+            {
+                "text": 'В меню браузера выберите пункт “Safari” > “Настройки”',
+                "image": {
+                    "normal": "https://cp.beget.com/shared/80113015aafa3f261ff2fe54ebd6508d/safari1.png",
+                    "retina": "https://cp.beget.com/shared/f8f7096f67c0e3d82446d0ce6217b27d/safari12x.png"
+                }
+            },
+            {
+                "text": 'В  дополнениях включите опцию “Показывать меню «Разработка» в строке меню” и закройте окно',
+                "image": {
+                    "normal": "https://cp.beget.com/shared/1193ae0503f94daafb5dd14c87a1ddde/safari2.png",
+                    "retina": "https://cp.beget.com/shared/138c05f2803ea0b167a7f975265ce43b/safari22x.png"
+                }
+            },
+            {
+                "text": 'В меню браузера выберите пункт “Разработка” > “Очистить кэши”',
+                "image": {
+                    "normal": "https://cp.beget.com/shared/87421068ec6d6013cade7cc6a37e9566/safari3.png",
+                    "retina": "https://cp.beget.com/shared/13520f6e24d62a88aa7c54519eb1a647/safari32x.png"
+                }
+            }
+
+        ],
+        yandex: [
+            {
+                "text": 'Откройте меню браузера (три горизонтальные полоски в правом верхнем углу окна)'
+            },
+            {
+                "text": 'Перейдите во вкладку "История"',
+                "image": {
+                    "normal": "https://cp.beget.com/shared/80ce1ee88a6a1cec9f2c7620f08a58c2/yandex2.png",
+                    "retina": "https://cp.beget.com/shared/0693faca5588f69ca7da9fe4212cdc97/yandex22x.png"
+                }
+            },
+            {
+                "text": 'Нажмите "Очистить историю" (справа)',
+                "image": {
+                    "normal": "https://cp.beget.com/shared/ff268c78b70d486538ecede196a9c1f2/yandex3.png",
+                    "retina": "https://cp.beget.com/shared/12096cc377f80dda5798cfe745bb66ec/yandex32x.png"
+                }
+            },
+            {
+                "text": 'Отметьте пункты "Файлы cookie и другие данные сайтов и модулей" и "файлы, сохраненные в кэше",  нажмите кнопку "Очистить историю"',
+                "image": {
+                    "normal": "https://cp.beget.com/shared/80e7ada09ac4b7da555a5119237ff108/yandex4.png",
+                    "retina": "https://cp.beget.com/shared/daa75ad57baee73ff347e589e11fc90f/yandex42x.png"
+                }
+            }
+
+        ],
+        opera: [
+            {
+                "text": 'Введите в адресной строке “opera://settings/clearBrowserData”, нажмите клавишу Enter',
+                "image": {
+                    "normal": "https://cp.beget.com/shared/cfb3606fa62fb6a2f951d3e7cd24a8d9/opera1.png",
+                    "retina": "https://cp.beget.com/shared/f72a61de7929ef3236d54a7eda5f27e2/opera12x.png"
+                }
+            },
+            {
+                "text": 'Поставьте галочки у пунктов "Файлы cookie и прочие данные сайтов" и "Кэшированные изображения и файлы", нажмите кнопку "Очистить историю посещений"',
+                "image": {
+                    "normal": "https://cp.beget.com/shared/d336439cc49a04a1885186dc1930c02c/opera2.png",
+                    "retina": "https://cp.beget.com/shared/6d6888aac8d3896da5cd201e8d31670b/opera22x.png"
+                }
+            }
+        ],
+        ie: [
+            {
+                "text": 'Выберите “Сервис” > “Удаление журнала обозревателя…”',
+                "image": {
+                    "normal": "https://cp.beget.com/shared/3585ac62cef9f65d999df211007ce578/explorer.png",
+                    "retina": "https://cp.beget.com/shared/33ae907b8ce690fe724d9616cb809d35/explorer2x.png"
+                }
+            }
+        ],
+    };
+
+    function clearCache(event) {
+        event.preventDefault();
+        window.location.reload(true);
+    }
+
+    function toggleInstruction(e) {
+        e.preventDefault();
+        $(".gallery").slideToggle();
+    };
+
+    var language = window.navigator.language || navigator.userLanguage,
+        ru = document.getElementById("ru"),
+        en = document.getElementById("en");
+
+    language = language.substr(0, 2).toLowerCase();
+
+    var mainDiv = ru;
+
+    if (language !== "ru") {
+        document.title = "The new site has been successfully created and is ready to work"
+        ru.style.display = "none"
+        en.style.display = "flex"
+        mainDiv = en;
+    }
+    var data = instructions.chrome;
+
+    if (browser.isFirefox) {
+        data = instructions.firefox;
+    }
+    if (browser.isChrome && !browser.isYandex) {
+        data = instructions.chrome;
+    }
+    if (browser.isYandex) {
+        data = instructions.yandex;
+    }
+    if (browser.isSafari) {
+        data = instructions.safari;
+    }
+    if (browser.isOpera) {
+        data = instructions.opera;
+    }
+    if (browser.isIE) {
+        data = instructions.ie;
+    }
+
+    window.onload = function () {
+        if (language === "ru") {
+            mainDiv.querySelector("#cache-hint").innerHTML = _.template(document.getElementById("cacheTemplateRu").innerHTML)({browser: browser});
+            mainDiv.querySelector("#hotkey").innerHTML = _.template(document.getElementById("hotkeyTemplate").innerHTML)({browser: browser});
+            mainDiv.querySelector("#instruction").innerHTML = _.template(document.getElementById("instructionTemplateRu").innerHTML)({data: data});
+            mainDiv.querySelector(".bottom").innerHTML = document.getElementById("bottomRu").innerHTML;
+            mainDiv.querySelector(".bottom-mobile").innerHTML = document.getElementById("bottomMobileRu").innerHTML;
+        } else {
+            mainDiv.querySelector("#cache-hint").innerHTML = _.template(document.getElementById("cacheTemplateEn").innerHTML)({browser: browser});
+            mainDiv.querySelector("#hotkey").innerHTML = _.template(document.getElementById("hotkeyTemplate").innerHTML)({browser: browser});
+            mainDiv.querySelector("#instruction").innerHTML = _.template(document.getElementById("instructionTemplateEn").innerHTML)({data: data});
+            mainDiv.querySelector(".bottom").innerHTML = document.getElementById("bottomEn").innerHTML;
+            mainDiv.querySelector(".bottom-mobile").innerHTML = document.getElementById("bottomMobileEn").innerHTML;
+        }
+        $('[data-fancybox="instruction"]').fancybox({
+            afterLoad: function (instance, current) {
+                var pixelRatio = window.devicePixelRatio || 1;
+
+                if (pixelRatio > 1.5) {
+                    current.width = current.width / pixelRatio;
+                    current.height = current.height / pixelRatio;
+                }
+            }
+        });
+    };
+
+</script>
 </body>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
-<script src="js/plugins.js"></script>
-<script src="js/custom.js"></script>
 </html>
